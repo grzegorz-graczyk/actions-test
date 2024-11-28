@@ -1,0 +1,17 @@
+name: Example
+on: 
+  push:
+
+jobs:
+  export:
+    name: Export Job
+    steps:
+      - name: Step
+        run: echo Hi
+
+  build:
+    name: Build Job
+    needs: export
+    steps:
+      - name: Step
+        run: echo Hi

@@ -5,6 +5,7 @@ on:
 jobs:
   export:
     name: Export Job
+    runs-on: ["Linux"]
     steps:
       - name: Step
         run: echo Hi
@@ -12,6 +13,7 @@ jobs:
   build:
     name: Build Job
     needs: export
+    runs-on: ["Linux"]
     steps:
       - name: Step
         run: echo Hi
